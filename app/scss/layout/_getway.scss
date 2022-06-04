@@ -1,0 +1,183 @@
+@use '../util/' as u;
+
+main{
+    // background-color: rgb(198, 255, 196);
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: u.$roboto;
+
+    .payment-details{
+
+        // outline: 5px solid green;
+        width: clamp(200px, 35vw, 700px);
+        h1{
+            font-size: u.rem(30);
+            font-weight: u.$roboto_black;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .methord{
+            input[type="radio"]{
+                display: none;
+            }
+            input[type="radio"]:checked + label::before {
+                    border: 5px solid var(--pink);
+            }
+
+            label {
+                position: relative;
+                margin: 0px 40px 0px 40px;
+                font-weight: u.$roboto_regular;
+
+                .dark-blue, .light-blue{
+                    color: var(--dark-blue);
+                    font-weight: u.$roboto_black;
+                    font-size: u.rem(20);
+                    font-style: italic;
+                }
+                .light-blue{
+                    color: var(--light-blue);
+                }
+            }
+
+            label::before{
+                content: '';
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--gray);
+                border-radius: 50%;
+                position: absolute;
+                top: -1px;
+                left: -30px;
+            }
+
+
+        }
+    }
+
+    .card-details{
+        margin-top: 30px;
+
+        input{
+            padding: u.rem(10);
+            border-radius: 10px;
+            border: 2px solid var(--input-border);
+            background-color: var(--input-bg);
+            color: var(--gray);
+            font-size: u.rem(20);
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        input:focus {
+            outline: none !important;
+            border: 2px solid var(--input-border);
+            box-shadow: 0 0 10px var(--side-bg);
+          }
+
+        label{
+            font-weight: u.$roboto_bold;
+            margin-bottom: 10px;
+        }
+        .card-no, .exp-date, .cvv{
+            display: flex;
+            flex-direction: column;
+        }
+        .card-other{
+            // margin: 15px 0px 15px 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .exp-date{
+            width: 65%;
+        } 
+        .cvv{
+            width: 30%;
+        }
+    }
+
+    .line{
+        height: 1px;
+        background-color: var(--hr);
+        margin-top: 40px;
+        border: none;
+    }
+
+    .payment-info{
+        .payment-numbers{
+            div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 15px 0px 15px 0px;
+
+                h1{
+                    font-size: u.rem(17);
+                    margin: 0;
+                    font-weight: u.$roboto_regular;
+                }
+
+                .billed-now{
+                    font-weight: u.$roboto_bold;
+                    font-size: u.rem(19);
+                }
+
+                h2{
+                    background-color: var(--dark-gray);
+                    font-size: u.rem(15);
+                    padding: 5px;
+                    border-radius: 5px;
+                    color: var(--light-gray);
+                    margin-right: 10px;
+                }
+
+                .discount{
+                    color: var(--true-pink);
+                }
+            }
+        }
+    }
+
+    .details{
+        p{
+            font-size: u.rem(14);
+            color: var(--dark-gray);
+            text-align: justify;
+            line-height: 1.4;
+        }
+    }
+
+    .submit{
+        color: var(--white);
+        background-color: var(--true-pink);
+        padding: 20px;
+        width: clamp(170px, 35%, 45% );
+        border: none;
+        border-radius: 10px;
+        font-size: u.rem(18);
+        margin-top: 25px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+    }
+
+    .submit:hover{
+        background-color: var(--dark-pink);
+    }
+
+
+    @media only screen and (max-width: 850px){
+        .payment-details{
+
+            width: 85%;
+            margin: auto;
+        }
+    }
+}

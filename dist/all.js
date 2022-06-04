@@ -1,0 +1,2 @@
+let bank_veri=document.getElementById("bank"),paypal_veri=document.getElementById("paypal");function bank(){bank_veri.style.display="block",paypal_veri.style.display="none"}function paypal(){bank_veri.style.display="none",paypal_veri.style.display="block"}app.global={init:function(){console.log("load global functions"),app.global.loadHeader()},loadHeader:function(){console.log("loadHeader()")}},app.global.init();
+//# sourceMappingURL=all.js.map

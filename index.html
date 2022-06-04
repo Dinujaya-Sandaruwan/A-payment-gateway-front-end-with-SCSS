@@ -8,6 +8,105 @@
     <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
+
+    <aside>
+        <div class="main">
+            <div class="text">
+                <h1 class="name">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <p class="tagline">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, officia veniam mollitia facilis magnam dolore natus dolorum nobis nam sed, vitae obcaecati dignissimos eum at."</p>
+                <div class="user">
+                    <img src="img/me.jpg" alt="">
+                    <div>
+                        <h1 class="name">Hasitha Sandeepa</h1>
+                        <h3 class="post">Student</h3>
+                    </div>
+                </div> 
+            </div>
+
+            
+        <img src="img/flowers-min.png" alt="" class="btm-art">
+
+        </div>
+
+    </aside>
+
+    <main>
+        <div class="main">
+            <div class="payment-details">
+                <h1>Payment Details</h1>
+
+                <div class="methord">
+                    <input checked="checked" type="radio" name="paypal" id="new-card" checked>
+                    <label for="new-card" class="new-card" onclick="bank()">New Card</label>
+                    <input type="radio" name="paypal" id="plypal">
+                    <label for="plypal" class="paypal" onclick="paypal()">
+                        <span class="dark-blue">Pay</span>
+                        <span class="light-blue">Pal</span>
+                    </label>
+                </div>
+
+                <!-- Bank Card Details -->
+                <div class="card-details" id="bank">
+                    <div class="card-no">
+                        <label for="card-no">Card Number</label>
+                        <input id="ccn" type="number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                    </div>
+                    <div class="card-other">
+                        <div class="exp-date">
+                            <label for="card-no">Expiration Date</label>
+                            <input type="month">
+                        </div>
+                        <div class="cvv">
+                            <label for="card-no">CVV</label>
+                            <input type="number" maxlength="3" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paypal Details -->
+                <div class="card-details" style="display:none;" id="paypal">
+                    <div class="card-no">
+                        <label for="card-no">Email Address</label>
+                        <input type="email" placeholder="example@email.com">
+                    </div>
+                    <div class="card-no">
+                        <label for="card-no">Password</label>
+                        <input type="password">
+                    </div>
+                </div>
+                <hr class="line">
+
+                <div class="payment-info">
+                    <div class="payment-numbers">
+                        <div>
+                            <h1>Subtotal</h1>
+                            <h1>$144.00</h1>
+                        </div>
+                        <div>
+                            <h1 class="discount">Discount For Tody</h1>
+                            <h1 class="discount">$20.00</h1>
+                        </div>
+                        <div >
+                            <h1 class="billed-now">Billed Now</h1>
+                            <div>
+                                <h2>USD</h2>
+                                <h1 class="billed-now">$124.00</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, suscipit saepe doloremque necessitatibus provident itaque consequatur optio rerum tempora laboriosam cupiditate enim numquam vero, nihil modi omnis tempore similique quasi odit quo sapiente, odio atque placeat? Fugit molestiae, accusamus dolorem est cumque vitae tempora aliquid, deleniti, animi dolore eos doloremque.</p>
+                </div>
+
+                <button class="submit" >Checkout Now</button>
+            </div>
+
+
+        </div>
+    </main>
+
     <script src="dist/all.js"></script>
 </body>
 </html>
