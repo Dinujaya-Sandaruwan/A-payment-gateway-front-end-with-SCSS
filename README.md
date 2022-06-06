@@ -1,1 +1,1 @@
-# Just a Payment Getway
+# Just a Payment Gateway
